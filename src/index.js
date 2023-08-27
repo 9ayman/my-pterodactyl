@@ -1,13 +1,11 @@
 module.exports = class PteroManager {
-  constructor(apiKey, url, cookie) {
+  constructor(apiKey, url) {
     this.apiKey = apiKey;
     this.url = url;
-    this.cookie = cookie
     this.headers = {
       "Accept": "application/json",
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${this.apiKey}`,
-      "cookie": this.cookie
+      "Authorization": `Bearer ${this.apiKey}`
     };
   }
 
@@ -15,7 +13,7 @@ module.exports = class PteroManager {
   
   createServer = async (query, body) => require('./functions/Servers/createServer')(this.url, this.headers, query, body);
 
-  createFolder = async (query, body) => require('./functions/Files/createFolder')(this.url, this.headers, query, body);
+  createFolder = async (query, userApiKey, body) => require('./functions/Files/createFolder')(this.url, this.headers, query, userApiKey, body);
 
   suspendServer = async (query) => require('./functions/Servers/suspendServer')(this.url, this.headers, query);
 
@@ -40,4 +38,6 @@ module.exports = class PteroManager {
   getServers = async () => require('./functions/Servers/getServers')(this.url, this.headers);
 
   getServer = async (query) => require('./functions/Servers/getServer')(this.url, this.headers, query);
+
+  writeFile = async (query, userApiKey, filePath, fileContent) => require('./functions/Files/writeFile')(this.url, this.headers, query, userApiKey, filePath, fileContent);
 };
