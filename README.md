@@ -7,7 +7,7 @@
 A powerful and easy-to-use API wrapper for Pterodactyl's API, providing a seamless integration of server management and user administration functionalities.
 
 ## Features
-
+ 
 - **User Management**: Effortlessly manage users with create, update, delete, and retrieval capabilities.
 - **Server Manipulation**: Control servers with options for creation, suspension, reinstallation, and more.
 - **File Operations**: Manage files and directories on servers, including read, write, and folder creation.
