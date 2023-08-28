@@ -1,0 +1,26 @@
+{
+  "name": "my-pterodactyl",
+  "version": "0.0.1",
+  "description": "A powerful and easy-to-use API wrapper for Pterodactyl's API, providing a seamless integration of server management and user administration functionalities.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notseven/my-pterodactyl.git"
+  },
+  "keywords": [
+    "pterodactyl",
+    "ptero"
+  ],
+  "author": "not.seven",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/notseven/my-pterodactyl/issues"
+  },
+  "homepage": "https://github.com/notseven/my-pterodactyl#readme"
+}
